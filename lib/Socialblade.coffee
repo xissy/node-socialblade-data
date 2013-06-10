@@ -23,7 +23,7 @@ getDateCountPairsFromScript = (script) ->
   result
 
 
-Socialblade.loadUserData = (user, options, callback) ->
+Socialblade.loadChannelData = (user, options, callback) ->
   callback = options  if typeof options is 'function'
 
   result = {}

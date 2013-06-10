@@ -6,9 +6,9 @@ Socialblade = require '../lib/Socialblade'
 describe 'Socialblade', ->
   user = 'sment'
 
-  describe '.loadUserData(...)', ->
+  describe '.loadChannelData(...)', ->
     it 'should be done', (done) ->
-      Socialblade.loadUserData user, (err, data) ->
+      Socialblade.loadChannelData user, (err, data) ->
         should.not.exist err
         should.exist data
 

@@ -22,12 +22,12 @@ Via [npm](https://npmjs.org):
 
 ### Getting statistics data by a channel id
 ```javascript
-  socialblade.loadUserData('channelId', function(err, data) {
+  socialblade.loadChannelData('channelId', function(err, data) {
     ...
   });
 ```
 
-### Getting partner id by a video id.
+### Getting partner id by a video id
 ```javascript
   socialblade.getPartnerIdByVideoId('videoId', function(err, partnerId)) {
     ...
