@@ -48,6 +48,8 @@ Socialblade.loadUserData = (user, options, callback) ->
           result.totalVideoViews = getDateCountPairsFromScript script
         if /graphdivdailychanviews/.test script
           result.dailyChannelViews = getDateCountPairsFromScript script
+        if /graphdivtotalchanviews/.test script
+          result.totalChannelViews = getDateCountPairsFromScript script
         if /graphavgviewsperdaypermo/.test script
           result.avarageViewsPerDayPerMonth = getDateCountPairsFromScript script
         if /graphtotalviewsperdaypermo/.test script

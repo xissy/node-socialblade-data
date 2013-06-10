@@ -17,6 +17,7 @@ describe 'Socialblade', ->
         data.dailyVideoViews.should.not.be.empty
         data.totalVideoViews.should.not.be.empty
         data.dailyChannelViews.should.not.be.empty
+        data.totalChannelViews.should.not.be.empty
         data.avarageViewsPerDayPerMonth.should.not.be.empty
         data.totalViewsPerDayPerMonth.should.not.be.empty
         
