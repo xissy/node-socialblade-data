@@ -22,3 +22,20 @@ describe 'Socialblade', ->
         
         done()
         
+  describe '.getPartnerIdByVideoId(...)', ->
+    it 'should be done', (done) ->
+      videoId = 'vqsthBOE1Dc'
+      Socialblade.getPartnerIdByVideoId videoId, (err, data) ->
+        should.not.exist err
+        should.exist data
+        
+        done()
+
+    it 'should be done', (done) ->
+      videoId = 'hEQNz3Rdst0'
+      Socialblade.getPartnerIdByVideoId videoId, (err, data) ->
+        should.not.exist err
+        should.not.exist data
+        
+        done()
+        

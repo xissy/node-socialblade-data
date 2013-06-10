@@ -15,7 +15,6 @@
     "async": "0.1.22",
     "request": "2.16.6",
     "cheerio": "0.10.5",
-    "node-uuid": "1.4.0",
     "moment": "2.0.0"
   },
   "devDependencies": {

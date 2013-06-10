@@ -56,5 +56,20 @@ Socialblade.loadUserData = (user, options, callback) ->
       callback null, result
 
 
+Socialblade.getPartnerIdByVideoId = (videoId, callback) ->
+  request
+    url: "http://www.youtube.com/watch?v=#{videoId}"
+  ,
+    (err, res, body) ->
+      return callback err  if err?
+
+      $ = cheerio.load body
+      partnerIdImageTag = $('img[src^="//www.youtube-nocookie.com/gen_204?attributionpartner="]')
+      return callback null, null  if partnerIdImageTag.length is 0
+
+      partnerId = partnerIdImageTag.attr('src').split('=')[1]
+      callback null, partnerId
+
+
 
 module.exports = Socialblade
