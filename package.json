@@ -1,6 +1,6 @@
 {
   "name": "socialblade-data",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A node.js module for getting data from socialblade.",
   "main": "lib/index",
   "repository": {

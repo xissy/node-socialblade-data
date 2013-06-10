@@ -55,6 +55,14 @@ Socialblade.loadChannelData = (user, options, callback) ->
         if /graphtotalviewsperdaypermo/.test script
           result.totalViewsPerDayPerMonth = getDateCountPairsFromScript script
 
+      result.byDate = {}
+      for totalSubscriber, index in result.totalSubscribers
+        date = totalSubscriber.date
+        result.byDate[date] =
+          totalSubscribers: totalSubscriber.count
+          totalVideoViews: result.totalVideoViews[index].count
+          totalChannelViews: result.totalChannelViews[index].count
+
       callback null, result
 
 
