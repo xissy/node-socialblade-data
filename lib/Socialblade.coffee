@@ -70,6 +70,7 @@ Socialblade.getPartnerIdByVideoId = (videoId, callback) ->
       return callback null, null  if partnerIdImageTag.length is 0
 
       partnerId = partnerIdImageTag.attr('src').split('=')[1]
+      partnerId = decodeURIComponent partnerId
       callback null, partnerId
 
 
