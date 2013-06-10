@@ -10,6 +10,7 @@ getDateCountPairsFromScript = (script) ->
   dateCountStrings = script.match /"[0-9]*,.?[0-9]*\\n"/g
   
   result = []
+  return result  if not dateCountStrings?
   
   for dateCountString in dateCountStrings
     dateCountString = dateCountString.replace /"/g, ''
@@ -23,13 +24,13 @@ getDateCountPairsFromScript = (script) ->
   result
 
 
-Socialblade.loadChannelData = (user, options, callback) ->
+Socialblade.loadChannelData = (channelId, options, callback) ->
   callback = options  if typeof options is 'function'
 
   result = {}
 
   request
-    url: "http://socialblade.com/youtube/user/#{user}"
+    url: "http://socialblade.com/youtube/user/#{channelId}"
   ,
     (err, res, body) ->
       return callback err  if err?
