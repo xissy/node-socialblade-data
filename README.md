@@ -2,6 +2,8 @@
 
 A node.js module for getting socialblade youtube statistics data.
 
+[![Build Status](https://travis-ci.org/xissy/node-socialblade-data.png?branch=master)](https://travis-ci.org/xissy/node-socialblade-data)
+
 ## Features
 
 - Gets logged youtube statistics data like subscribers, channel view count and videos view count by a channel id.
