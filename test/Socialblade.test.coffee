@@ -4,10 +4,11 @@ Socialblade = require '../lib/Socialblade'
 
 
 describe 'Socialblade', ->
-  channelId = 'sment'
 
   describe '.loadChannelData(...)', ->
     it 'should be done', (done) ->
+      channelId = 'sment'
+
       Socialblade.loadChannelData channelId, (err, data) ->
         should.not.exist err
         should.exist data
@@ -21,6 +22,15 @@ describe 'Socialblade', ->
         data.avarageViewsPerDayPerMonth.should.not.be.empty
         data.totalViewsPerDayPerMonth.should.not.be.empty
         Object.keys(data.byDate).length.should.equal data.totalSubscribers.length
+        
+        done()
+
+    it 'should be null', (done) ->
+      channelId = 'jamiroquaie'
+
+      Socialblade.loadChannelData channelId, (err, data) ->
+        should.not.exist err
+        should.not.exist data
         
         done()
         
