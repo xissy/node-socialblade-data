@@ -1,8 +1,8 @@
 {
   "name": "socialblade-data",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A node.js module for getting data from socialblade.",
-  "main": "lib/index",
+  "main": "index",
   "repository": {
     "type" : "git",
     "url" : "https://github.com/xissy/node-socialblade-data.git"
