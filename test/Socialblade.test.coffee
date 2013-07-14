@@ -26,7 +26,7 @@ describe 'Socialblade', ->
         done()
 
     it 'should be null', (done) ->
-      channelId = 'jamiroquaie'
+      channelId = 'thereisnochannellikethisabcde'
 
       Socialblade.loadChannelData channelId, (err, data) ->
         should.not.exist err
